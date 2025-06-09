@@ -1,1 +1,140 @@
-body {\n    font-family: Arial, sans-serif;\n    margin: 0;\n    padding: 0;\n}\\n.header {\n    background-color: #f7f7f7;\n    padding: 20px;\n    text-align: center;\n}\\n.navbar {\n    background-color: #333;\n}\\n.nav-menu {\n    list-style-type: none;\n    padding: 0;\n    margin: 0;\n    display: flex;\n    justify-content: space-around;\n}\\n.nav-menu li a {\n    color: white;\n    padding: 14px 20px;\n    text-decoration: none;\n}\\n.content {\n    display: flex;\n    justify-content: space-between;\n    padding: 20px;\n}\\n.column {\n    width: 48%;\n    background-color: #e9e9e9;\n    margin: 1%;\n    padding: 10px;\n    box-shadow: 0 0 10px rgba(0,0,0,0.1);\n}\\n.footer {\n    text-align: center;\n    padding: 10px;\n    background-color: #f7f7f7;\n}\\n@media only screen and (max-width: 768px) {\n    .nav-menu {\n        flex-direction: column;\n        align-items: center;\n    }\n    .column {\n        width: 100%;\n        margin: 10px 0;\n    }\n    h1 {\n        font-size: 1.5rem;\n    }\n    h2 {\n        font-size: 1.2rem;\n    }\n    nav {\n        padding: 0;\n    }\n}
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu li {
+  margin: 0;
+}
+
+.nav-menu li a {
+  display: block;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+  background-color: #555;
+}
+
+/* Header */
+.header {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 40px 20px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: #222;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Main content */
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.column {
+  background-color: #e9e9e9;
+  padding: 20px;
+  width: 48%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
+.column h2 {
+  margin-top: 0;
+  color: #222;
+}
+
+.column ul {
+  padding-left: 20px;
+}
+
+.column ul li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  color: #555;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+  margin-top: 40px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu li a {
+    padding: 12px 10px;
+  }
+
+  .content {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+}
